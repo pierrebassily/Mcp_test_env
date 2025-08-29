@@ -1,0 +1,19 @@
+# FastMCP and MCP
+fastmcp>=2.0.0
+mcp>=1.0.0
+
+# HTTP and async
+aiohttp>=3.8.0
+
+# Data handling
+pydantic>=2.0.0
+
+# Optional for enhanced functionality
+pandas>=2.0.0  # For data processing
+numpy>=1.24.0   # For numerical operations
+uvicorn>=0.24.0  # For running FastMCP server
+
+langchain==0.3.9
+langgraph==0.4.5
+langchain-aws==0.2.10
+langchain-core==0.3.60
