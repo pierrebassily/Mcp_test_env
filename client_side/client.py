@@ -81,9 +81,9 @@ class MCPClient:
                                 name=tool.name,
                                 description=tool.description
                                 or "No description available",
-                                input_schema=tool.inputSchema
-                                if tool.inputSchema
-                                else {},
+                                input_schema=(
+                                    tool.inputSchema if tool.inputSchema else {}
+                                ),
                             )
             logger.info(
                 f"Discovered tools from MCP server: {len(self.available_tools)} tools available."
