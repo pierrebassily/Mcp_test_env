@@ -1,6 +1,9 @@
-FROM python:3.10-slim
-WORKDIR /app
-COPY ../requirements.txt ./
+FROM mcp_base:latest
+
+RUN cd /app
+
+# Copy agent sources into the container (build context is ./agent)
 COPY . .
-RUN pip install --no-cache-dir -r requirements.txt
+
+# Use the preinstalled virtualenv from mcp_base; no need to reinstall requirements
 CMD ["python", "agent.py"]

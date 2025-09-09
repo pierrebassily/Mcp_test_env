@@ -1,6 +1,9 @@
-FROM python:3.10-slim
-WORKDIR /app
-COPY ../requirements.txt ./
+FROM mcp_base:latest
+
+RUN cd /app
+# Copy server sources into the container (build context is ./server_side)
 COPY . .
-RUN pip install --no-cache-dir -r requirements.txt
+
+# Server runtime uses packages already installed in mcp_base
+# (No additional pip install needed here)
 CMD ["python", "server.py"]

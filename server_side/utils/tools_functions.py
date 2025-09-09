@@ -6,7 +6,7 @@ Functions that used in actual tool implementations
 from typing import Dict, Any
 import asyncio
 import aiohttp
-import datetime
+from datetime import datetime
 from .input_models import FileOperationInput, APICallInput, DatabaseQueryInput
 from pathlib import Path
 import sqlite3

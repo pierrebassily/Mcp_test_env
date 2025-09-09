@@ -1,6 +1,12 @@
-FROM python:3.10-slim
-WORKDIR /app
-COPY ../requirements.txt ./
+
+
+
+
+FROM mcp_base:latest
+
+RUN cd /app
+
+# Copy client sources into the container (build context is ./client_side)
 COPY . .
-RUN pip install --no-cache-dir -r requirements.txt gradio
+
 CMD ["python", "client.py"]

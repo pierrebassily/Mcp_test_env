@@ -7,8 +7,8 @@ from datetime import datetime
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
-from .utils.mcp_tools_models import MCPTool, MCPToolCall, MCPToolResult
-from .utils.utils import _format_parameters_for_tool, _parse_tool_result
+from utils.mcp_tools_models import MCPTool, MCPToolCall, MCPToolResult
+from utils.utils import _format_parameters_for_tool, _parse_tool_result
 
 
 logging.basicConfig(
